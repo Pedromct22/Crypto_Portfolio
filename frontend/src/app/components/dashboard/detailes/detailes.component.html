@@ -1,0 +1,38 @@
+<div class="container mb-3">
+    <div class="row justify-content-around">
+        <div class="col-2 border">
+          <div class="d-inline-flex">
+            <div class=" align-self-center ">
+              <img src="../../../../assets/img/dashboard/bank.png" height="35" alt="">
+            </div>
+              <div class="p-2 mt-2">
+                <p class="titles">Wallet Balance</p>
+                <p class="text-center">{{totalBalance | number:'1.2-2'}} $</p>
+              </div>
+        </div>
+        </div>
+        <div class="col-2 border">
+          <div class="d-inline-flex">
+            <div class=" align-self-center ">
+              <img src="../../../../assets/img/dashboard/money.png" height="35" alt="">
+            </div>
+              <div class="p-2 mt-2">
+                <p class="titles">Total Gross Profit</p>
+                <p class="text-center">{{totalProfit | slice:0:5}} $</p>
+              </div>
+        </div>
+        </div>
+        <div class="col-2 border">
+          <div class="d-inline-flex">
+            <div class=" align-self-center ">
+              <img src="../../../../assets/img/dashboard/arrow.png" height="35" alt="">
+            </div>
+              <div class="p-2 mt-2">
+                <p class="titles">Total Gross Gain</p>
+                <p class="text-center">{{percentageReturn | number:'1.2-2'}} %</p>
+              </div>
+        </div>
+        </div>
+      </div>
+    </div>
+    

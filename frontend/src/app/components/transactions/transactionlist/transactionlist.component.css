@@ -1,0 +1,26 @@
+.source{
+    text-decoration: none;
+}
+.copy{
+    cursor: pointer;
+    color: black;
+    text-decoration: none;
+}
+.toaster{
+    position: fixed;
+    top: 5%;
+    right: 0%;
+    background-color: lightgreen;
+}
+
+.btn:hover {
+    transform: scale(1.2);
+}
+
+.top{
+    margin-top: 5%;
+}
+
+.cursor{
+    cursor: pointer;
+}

@@ -1,0 +1,40 @@
+<app-header></app-header>
+<div class="container">
+    <div class="row space">
+        <p class="display-6 col-9">Your portfolio</p>
+        <div class="col-1 d-flex align-items-center date">
+            <app-date-picker></app-date-picker>
+        </div>
+        <div class="col-2 d-flex align-items-center">
+            <div ngbDropdown class="d-inline-block">
+                <button type="button" class="nav-link btn shadow-none" id="dropdownBasic1" ngbDropdownToggle>
+                    {{selectedItem | slice:0:12}}
+                </button>
+                <div class="list-dropdown" ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                  <button ngbDropdownItem class="item-dropdown" *ngFor="let item of listAddress" (click)="onSelect(item)">
+                    <div *ngIf="item.walletName">
+                        {{item.walletName}}
+                    </div>
+                    <div *ngIf="!item.walletName">
+                        {{item.walletAddress | slice:0:9}}{{item.accountName}}
+                    </div>
+                </button>
+                </div>
+              </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-8">
+            <app-linear-chart [piechartValues]="piechartValues"></app-linear-chart>
+        </div>
+        <div class="col-lg-4">
+            <app-pie-chart [coinId]="coinId" ></app-pie-chart>
+        </div>
+    </div>
+    <div>
+        <app-detailes [totalBalance]="totalBalance" [totalProfit]="totalProfit" [percentageReturn]="percentageReturn"></app-detailes>
+    </div>
+    <div>
+        <app-crypto-details [details1]="details1" [balance]="balance" [totalBalance]="totalBalance" [coinPrice]="coinPrice" ></app-crypto-details>
+    </div>
+</div>

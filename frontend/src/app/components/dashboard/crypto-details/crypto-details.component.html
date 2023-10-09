@@ -1,0 +1,49 @@
+<div class="container m-3">
+    <p class="bold">Positions</p>
+    <div class="row">
+        <div class="col-2">
+            <p>Name</p>
+        </div>
+        <div class="col-2">
+            <p>Symbol</p>
+        </div>
+        <div class="col-2">
+            <p>Balance</p>
+        </div>
+        <div class="col-2">
+            <p>Coin Value</p>
+        </div>
+        <div class="col-2">
+            <p>Total</p>
+        </div>
+        <div class="col-2">
+            <p>24H Return</p>
+        </div>
+    </div>
+    <hr class="line">
+            <div class="row mt-3">
+                <div class="col-2">
+                    {{details1?.name}}
+                </div>
+                <div class="col-2">
+                    {{details1?.symbol}}
+                </div>
+                <div class="col-2">
+                    {{balance | number:'1.0-2'}} {{details1?.symbol}}
+                </div>
+                <div class="col-2">
+                    {{coinPrice }}$ 
+                </div>
+                <div class="col-2">
+                    {{totalBalance | number:'1.2-2' }}$ 
+                </div>
+                <div *ngIf="details1?.market_data.price_change_percentage_24h> 0" class="col-2 positive">
+                    {{details1?.market_data.price_change_percentage_24h | number:'1.2-2'}} %
+                </div>
+                <div *ngIf="details1?.market_data.price_change_percentage_24h < 0" class="col-2 negative">
+                    {{details1?.market_data.price_change_percentage_24h | number:'1.2-2'}} %
+                </div>
+
+
+        </div>
+    </div>
