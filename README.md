@@ -2,7 +2,7 @@
 
 #Web3/Blockchain – Auditing and Analytics Blockchain Dashboard 
 
-Frontend - Angular 
+Frontend - Angular TypeScript  
 
-Backend - ASP.net
+Backend - ASP.net Nodejs
 
